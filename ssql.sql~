@@ -1,0 +1,291 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.3
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Jan 30, 2011 at 11:34 PM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.6
+
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+CREATE DATABASE `sco` IF NOT EXISTS ;
+USE `sco` ;
+
+-- 
+-- Database: `sco`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `items`
+-- 
+
+CREATE TABLE `items` (
+  `item_id` int(11) NOT NULL auto_increment,
+  `organizations_id` int(11) default NULL,
+  `parent_id` int(11) default NULL,
+  `title_bg` varchar(200) default NULL,
+  `title_uk` varchar(200) default NULL,
+  `invisible` varchar(45) default NULL,
+  `parameters` varchar(200) default NULL,
+  `metadata` varchar(200) default NULL,
+  `metadata_link` varchar(200) default NULL,
+  `time_limi_action` varchar(45) default NULL,
+  `data_from_lms` text,
+  `sequencing` varchar(45) default NULL,
+  `presentation` varchar(45) default NULL,
+  `author` varchar(100) default NULL,
+  `date` datetime default NULL,
+  PRIMARY KEY  (`item_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+
+-- 
+-- Dumping data for table `items`
+-- 
+
+INSERT INTO `items` VALUES (1, 1, 0, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', '', 'LESSON-77', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (2, 1, 1, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸šà¸—à¸—à¸µà¹ˆ à¹‘ à¸«à¸™à¸¹à¸—à¸³à¹„à¸”à¹‰', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-78', 'SCO-78', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (3, 1, 1, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸šà¸—à¸—à¸µà¹ˆ à¹’ à¸ˆà¸±à¸”à¹€à¸à¹‡à¸šà¸™à¸°à¸«à¸™à¸¹ à¸”à¸¹à¸‡à¸²à¸¡à¸•à¸²', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-79', 'SCO-79', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (4, 1, 1, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸šà¸—à¸—à¸µà¹ˆ à¹“ à¸ à¸²à¸Šà¸™à¸°à¸™à¹ˆà¸²à¸£à¸¹à¹‰', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-80', 'SCO-80', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (5, 1, 1, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¹à¸šà¸šà¸—à¸”à¸ªà¸­à¸šà¸§à¸±à¸”à¸œà¸¥à¸ªà¸±à¸¡à¸¤à¸—à¸˜à¸´à¹Œ à¸›à¸£à¸°à¸ˆà¸³à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-81', 'SCO-81', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (6, 1, 0, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹’ à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸à¸²à¸£à¸—à¸³à¸‡à¸²à¸™', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', '', 'LESSON-82', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (7, 1, 6, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸šà¸—à¸—à¸µà¹ˆ à¹‘ à¸‡à¸²à¸™à¸šà¹‰à¸²à¸™', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-83', 'SCO-83', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (8, 1, 6, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸šà¸—à¸—à¸µà¹ˆ à¹’ à¸‡à¸²à¸™à¹€à¸à¸©à¸•à¸£', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-84', 'SCO-84', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (9, 1, 6, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸šà¸—à¸—à¸µà¹ˆ à¹“ à¸‡à¸²à¸™à¸›à¸£à¸°à¸”à¸´à¸©à¸à¹Œ', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-85', 'SCO-85', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (10, 1, 6, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¹à¸šà¸šà¸—à¸”à¸ªà¸­à¸šà¸§à¸±à¸”à¸œà¸¥à¸ªà¸±à¸¡à¸¤à¸—à¸˜à¸´à¹Œ à¸›à¸£à¸°à¸ˆà¸³à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹’', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-86', 'SCO-86', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (11, 1, 0, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹“ à¸à¹‰à¸²à¸§à¸—à¸±à¸™à¹‚à¸¥à¸', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', '', 'LESSON-87', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (12, 1, 11, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸šà¸—à¸—à¸µà¹ˆ à¹‘ à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸™à¹ˆà¸²à¸£à¸¹à¹‰', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-88', 'SCO-88', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (13, 1, 11, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¸šà¸—à¸—à¸µà¹ˆ à¹’ à¹€à¸—à¸„à¹‚à¸™à¹‚à¸¥à¸¢à¸µà¸ªà¸²à¸£à¸ªà¸™à¹€à¸—à¸¨', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-89', 'SCO-89', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (14, 1, 11, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'à¹à¸šà¸šà¸—à¸”à¸ªà¸­à¸šà¸§à¸±à¸”à¸œà¸¥à¸ªà¸±à¸¡à¸¤à¸—à¸˜à¸´à¹Œ à¸›à¸£à¸°à¸ˆà¸³à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹“', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-90', 'SCO-90', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (15, 1, 11, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', 'Pre-O-Net', 'true', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '', 'hierarchical', 'RES-1485', 'SCO-1485', '2011-01-12 00:20:42');
+INSERT INTO `items` VALUES (16, 2, 0, 'A001', 'A001', '', '-', 'ADL SCORM1.2TEST.xml', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd                               http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd                               http:', '', '', '', 'A001', 'I_A001', '2011-01-20 23:18:50');
+INSERT INTO `items` VALUES (17, 3, 0, 'V6EyeLesson', 'V6EyeLesson', 'true', '-', '', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', '1,1,1,1,1,1,1,1', '', 'R_S100001', 'S100001', '2011-01-20 23:21:41');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `items_resources`
+-- 
+
+CREATE TABLE `items_resources` (
+  `items_resources_id` int(11) NOT NULL auto_increment,
+  `resource_id` int(11) default NULL,
+  `item_id` int(11) default NULL,
+  `author` varchar(100) default NULL,
+  `date` datetime default NULL,
+  PRIMARY KEY  (`items_resources_id`),
+  KEY `resource_id` (`resource_id`,`item_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+
+-- 
+-- Dumping data for table `items_resources`
+-- 
+
+INSERT INTO `items_resources` VALUES (1, 1, 2, 'RES-78', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (2, 2, 3, 'RES-79', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (3, 3, 4, 'RES-80', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (4, 4, 5, 'RES-81', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (5, 5, 7, 'RES-83', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (6, 6, 8, 'RES-84', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (7, 7, 9, 'RES-85', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (8, 8, 10, 'RES-86', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (9, 9, 12, 'RES-88', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (10, 10, 13, 'RES-89', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (11, 11, 14, 'RES-90', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (12, 12, 15, 'RES-1485', '2011-01-12 00:20:42');
+INSERT INTO `items_resources` VALUES (13, 13, 16, 'A001', '2011-01-20 23:18:50');
+INSERT INTO `items_resources` VALUES (14, 14, 17, 'R_S100001', '2011-01-20 23:21:41');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `manifests`
+-- 
+
+CREATE TABLE `manifests` (
+  `manifests_id` int(11) NOT NULL auto_increment,
+  `metadata` varchar(255) default NULL,
+  `metadata_link` varchar(255) default NULL,
+  `author` varchar(100) default NULL,
+  `date` datetime default NULL,
+  PRIMARY KEY  (`manifests_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+-- 
+-- Dumping data for table `manifests`
+-- 
+
+INSERT INTO `manifests` VALUES (1, 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', 'PLAYABLE-ux27-36B3-m5fN-KrPW-rE6E', '2011-01-12 00:20:42');
+INSERT INTO `manifests` VALUES (2, 'ADL SCORM1.2TEST.xml', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd                               http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd                               http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', 'CourseID', '2011-01-20 23:18:50');
+INSERT INTO `manifests` VALUES (3, '', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', 'index.html', '2011-01-20 23:21:41');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `organizations`
+-- 
+
+CREATE TABLE `organizations` (
+  `organizations_id` int(11) NOT NULL auto_increment,
+  `manifests_id` int(11) default NULL,
+  `title_bg` varchar(200) default NULL,
+  `title_uk` varchar(200) default NULL,
+  `metadata` varchar(200) default NULL,
+  `metadata_link` varchar(200) default NULL,
+  `sequencing` varchar(200) default NULL,
+  `author` varchar(100) default NULL,
+  `date` datetime default NULL,
+  PRIMARY KEY  (`organizations_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+-- 
+-- Dumping data for table `organizations`
+-- 
+
+INSERT INTO `organizations` VALUES (1, 1, 'à¸«à¸™à¹ˆà¸§à¸¢à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸£à¸¹à¹‰à¸—à¸µà¹ˆ à¹‘ à¸Šà¸µà¸§à¸´à¸•à¸ªà¸¸à¸‚à¸ªà¸±à¸™à¸•à¹Œ', '-', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', 'hierarchical', 'SUBJECT-10', '2011-01-12 00:20:42');
+INSERT INTO `organizations` VALUES (2, 2, 'A001', '-', 'ADL SCORM1.2TEST.xml', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd                               http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd                               http:', '', 'CourseID-org', '2011-01-20 23:18:50');
+INSERT INTO `organizations` VALUES (3, 3, 'V6EyeLesson', '-', '', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd', '', 'B0', '2011-01-20 23:21:41');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `organizations_class`
+-- 
+
+CREATE TABLE `organizations_class` (
+  `organizations_id` int(11) NOT NULL,
+  `class` int(11) NOT NULL,
+  KEY `organizations_id` (`organizations_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Dumping data for table `organizations_class`
+-- 
+
+INSERT INTO `organizations_class` VALUES (1, 1);
+INSERT INTO `organizations_class` VALUES (2, 2);
+INSERT INTO `organizations_class` VALUES (3, 3);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `resources`
+-- 
+
+CREATE TABLE `resources` (
+  `resource_id` int(11) NOT NULL auto_increment,
+  `title_bg` varchar(200) default NULL,
+  `title_uk` varchar(255) default NULL,
+  `type` varchar(45) default NULL,
+  `link_bg` varchar(100) default NULL,
+  `link_uk` varchar(100) default NULL,
+  `metadata` varchar(100) default NULL,
+  `metadata_link` varchar(100) default NULL,
+  `author` varchar(100) default NULL,
+  `date` datetime default NULL,
+  PRIMARY KEY  (`resource_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+
+-- 
+-- Dumping data for table `resources`
+-- 
+
+INSERT INTO `resources` VALUES (1, '', '', 'webcontent', '78/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-78', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (2, '', '', 'webcontent', '79/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-79', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (3, '', '', 'webcontent', '80/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-80', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (4, '', '', 'webcontent', '81/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-81', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (5, '', '', 'webcontent', '83/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-83', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (6, '', '', 'webcontent', '84/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-84', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (7, '', '', 'webcontent', '85/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-85', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (8, '', '', 'webcontent', '86/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-86', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (9, '', '', 'webcontent', '88/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-88', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (10, '', '', 'webcontent', '89/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-89', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (11, '', '', 'webcontent', '90/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-90', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (12, '', '', 'webcontent', '1485/sco.htm', '', 'ADL SCORM1.2', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'RES-1485', '2011-01-12 00:20:42');
+INSERT INTO `resources` VALUES (13, '', '', 'webcontent', 'a001index.html', '', 'ADL SCORM1.2TEST.xml', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd                               ht', 'A001', '2011-01-20 23:18:50');
+INSERT INTO `resources` VALUES (14, '', '', 'webcontent', 'index.html', '', '', 'http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/ims', 'R_S100001', '2011-01-20 23:21:41');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `scormvars`
+-- 
+
+CREATE TABLE `scormvars` (
+  `SCOInstanceID` int(10) unsigned NOT NULL default '0',
+  `varName` varchar(255) default NULL,
+  `varValue` text,
+  KEY `SCOInstanceID` (`SCOInstanceID`),
+  KEY `varName` (`varName`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Dumping data for table `scormvars`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `sco_data`
+-- 
+
+CREATE TABLE `sco_data` (
+  `sco_id` int(10) NOT NULL auto_increment,
+  `item_id` int(10) NOT NULL,
+  `entry` varchar(255) NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `suspend_data` varchar(255) NOT NULL,
+  `launch_data` varchar(255) NOT NULL,
+  `student_id` int(10) NOT NULL,
+  `raw_score` float NOT NULL,
+  `min_scrore` float NOT NULL,
+  `max_scrore` float NOT NULL,
+  `mastery_score` float NOT NULL,
+  `num_count` int(10) NOT NULL,
+  `score` float NOT NULL,
+  `total_time` varchar(20) NOT NULL,
+  `session_time` varchar(255) NOT NULL,
+  `session_time_avg` varchar(255) NOT NULL,
+  `exit` varchar(255) NOT NULL,
+  `start_time` datetime NOT NULL,
+  `finish_time` datetime NOT NULL,
+  `status` varchar(20) NOT NULL,
+  `last_update` datetime NOT NULL,
+  PRIMARY KEY  (`sco_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- 
+-- Dumping data for table `sco_data`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `student`
+-- 
+
+CREATE TABLE `student` (
+  `student_id` int(10) NOT NULL,
+  `student_name` varchar(100) NOT NULL,
+  `student_lastname` varchar(100) NOT NULL,
+  `student_password` varchar(100) NOT NULL,
+  `student_type` varchar(10) NOT NULL,
+  `register_date` datetime NOT NULL,
+  `lastlogin_date` datetime NOT NULL,
+  PRIMARY KEY  (`student_id`),
+  KEY `student_password` (`student_password`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Dumping data for table `student`
+-- 
+
+INSERT INTO `student` VALUES (123, 'เอก', 'นามสกุลครับ', 'f36be299416ce9ec93378ce502330714', 'student', '2011-01-14 00:01:31', '2011-01-14 00:01:31');
+INSERT INTO `student` VALUES (1, 'admin', 'admin', '3fadc1f78701de5da2b8c048cd1460db', 'admin', '2011-01-22 16:53:58', '2011-01-22 16:53:58');
+INSERT INTO `student` VALUES (2, 'guest', 'guest', 'ee0454034972a8773fe2009f3dc444e2', 'guest', '2011-01-22 14:30:55', '2011-01-22 14:30:55');
+INSERT INTO `student` VALUES (456, '456', '456', '3fadc1f78701de5da2b8c048cd1460db', 'student', '2011-01-26 21:58:45', '2011-01-26 21:58:45');

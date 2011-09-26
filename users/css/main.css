@@ -1,0 +1,16 @@
+div.debug_php { background-color:#efefef; 
+				padding: 1px;
+				color:#ababac;
+				font-size:15px;
+				border:2px solid #efefef;
+				border-radius: 10px;
+				-moz-border-radius:10px;
+				}
+				
+div.formupload ,div.line-record{
+	padding: 5px;
+	margin: 5px;
+	
+}
+
+

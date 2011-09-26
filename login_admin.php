@@ -1,0 +1,44 @@
+<?
+$err = "";
+if(get_param("student_name","post")){
+
+	$student_name = get_param("student_name","post");
+	$sql = "select * from student where student_name like '{$student_name}' limit 1";
+	$result = mysql_query($sql,$link);
+
+	while($row = mysql_fetch_array($result)){
+		$student_id = $row['student_id'];
+	}
+	
+	if($student_id == 1){
+		if(login($student_id,get_param("student_pass","post"))){
+			js_redirect("index.php");
+			die("");
+		}else{
+			$err = "ชื่อ หรือ รหัสผ่านไม่ถูกต้อง";
+		}
+	}else{
+		$err = "ชื่อไม่ถูกต้อง";
+	}
+
+}
+
+?>
+<div class="right_panel">
+		<div class="content_inner">	
+		<div class="form_login">
+			<em class="error"><?=$err?></em>
+			Teacher <hr/>
+			<center>
+			<img src="images/teacher.jpg"/><br/>
+			<form action="?cmd=login_admin" method="post">
+				<input class="text_login" type="hidden" id="student_name" name="student_name" value="admin" />
+				<input class="text_login" type="hidden" id="student_pass" name="student_pass" value="1234" />
+				<input class="bt_input" type="submit" value="เข้าสู่ระบบ">
+				</p>
+			 </form>
+			</center>
+		</div>
+		</div>
+</div>
+<div class="clear"></div>

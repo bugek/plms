@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html> 
+
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<title>My First Grid</title>
+			<link rel=”shortcut icon” href=”http://localhost:82/favicon.ico” mce_href=”http://localhost:82/favicon.ico”/>
+			<link rel="stylesheet" href="css/redmond/jquery-ui-1.8.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+			<link rel="stylesheet" href="css/ui.jqgrid.css" type="text/css" media="screen" title="no title" charset="utf-8">
+			
+			<style type="text/css" media="screen">
+				html,body { 
+					margin: 0; 
+					pading: 0;
+					font-size: 75%;
+				}
+			</style>
+			<script src="js/jquery-1.5.2.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/i18n/grid.locale-en.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/jquery.jqGrid.min.js" type="text/javascript" charset="utf-8"></script>
+			
+			<script type="text/javascript" charset="utf-8">
+				$(function(){
+					$("#list").jqGrid({
+						url:user.php,
+						datatype: 'xml',
+						mtype: 'GET',
+						colNames:['รหัสนักเรียน','คำนำหน้า','ชื่อ','นามสกุล','กลุ่ม'],
+					   colModel:[
+										{name:'student_id' , index: 'student_id' , width:45},
+										{name:'prefix_name' , index: 'student_id' , width:10},
+										{name:'student_name' , index: 'student_id' , width:60},
+										{name:'student_lastname' , index: 'student_id' , width:65},
+										{name:'student_type' , index: 'student_id' , width:20}
+									],
+						pager: '#pager',
+						rowNum:30,
+						rowList:[10,20,30],
+						sortname:'student_id',
+						sortorder: 'desc',
+						viewrecords: true,
+						caption: 'My first grid'
+					});
+				});
+			</script>
+		</head>
+		
+	<body>
+		<table id="list"></table>
+		<div id="pager"></div>
+   </body>
+
+</html>
+

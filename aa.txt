@@ -1,0 +1,38 @@
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+211
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+211
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+209
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+209
+UPDATE `sco_data` SET `lesson_graduate` = 'a:1:{i:0;s:3:"208";}',
+			`lesson_graduate_ps` = '4'  where student_id=2 and organizations_id=14
+210
+UPDATE `sco_data` SET `lesson_graduate` = 'a:2:{i:0;s:3:"208";i:1;i:210;}',
+			`lesson_graduate_ps` = '8'  where student_id=2 and organizations_id=14
+210
+UPDATE `sco_data` SET `lesson_graduate` = 'a:2:{i:0;s:3:"208";i:1;i:210;}',
+			`lesson_graduate_ps` = '8'  where student_id=2 and organizations_id=14
+209
+UPDATE `sco_data` SET `lesson_graduate` = 'a:3:{i:0;s:3:"208";i:1;i:210;i:2;i:209;}',
+			`lesson_graduate_ps` = '12'  where student_id=2 and organizations_id=14
+209
+UPDATE `sco_data` SET `lesson_graduate` = 'a:3:{i:0;s:3:"208";i:1;i:210;i:2;i:209;}',
+			`lesson_graduate_ps` = '12'  where student_id=2 and organizations_id=14

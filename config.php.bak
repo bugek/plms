@@ -1,0 +1,14 @@
+<?php
+
+// database information
+$dbname = "sco";
+$dbhost = "localhost:8889";
+$dbuser = "root";
+$dbpass = "";
+$cd_type = 1; // Type of cd.
+$status_sco = array(
+"incomplete"=>"กำลังเรียน",
+"completed"=>"เรียนจบแล้ว",
+"return"=>"ทบทวน",
+);
+$keypass = "playable"; ?>

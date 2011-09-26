@@ -1,0 +1,199 @@
+<?
+$err = "";
+if(get_param("student_id","post")){
+
+	if(login(get_param("student_id","post"),get_param("student_pass","post"))){
+		js_redirect("index.php?cmd=show_course");
+		die("");
+	}else{
+		$err = "รหัสนักเรียน หรือ รหัสผ่านไม่ถูกต้อง";
+	}
+}
+
+?>
+<div class="form_login">
+	<h1>เข้าสู่ระบบ</h1>
+	<em class="error"><?=$err?></em>
+	<form action="?cmd=login" method="post">
+		<p>
+		<label for="student_id">รหัสนักเรียน: </label>
+		<input class="text_login" type="text" id="student_id" name="student_id" /><br />
+		
+		<label for="student_pass">รหัสผ่าน: </label>
+		<input class="text_login" type="password" id="student_pass" name="student_pass" /><br />	
+		<input class="bt_input" id="regist_bt" type="button" value="ลงทะเบียนเรียน">
+		<input class="bt_input" type="submit" value="Login">
+		</p>
+	 </form>
+</div>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("#register_form").validate({
+	errorElement: "em",
+	submitHandler: function() {
+		//alert($("#register_form #student_id").val());
+		$('#err_student_id').remove();
+		$.post("index_ajax.php?cmd=check_student_id", { student_id: $("#register_form #student_id").val()},
+		function(data) {
+		
+			if(data == 'false'){
+				preview_register();
+			}else{
+				$('#register_form #student_id').after('<em id="err_student_id" htmlfor="student_id" generated="true" class="error" style="display: block;">รหัสนักเรียนซ้ำ</em>');
+			}
+		},'text');
+   },
+	rules: {
+		 student_id: {
+		   required: true,
+		   number: true
+		 },
+		 student_pass: {
+		   required: true
+		 },
+		 student_name: {
+		   required: true
+		 },
+		 student_lastname: {
+		   required: true
+		 }
+	},
+	messages: {
+		 student_id: {
+		   required: "กรุณากรอกรหัสนักเรียน",
+		   number: "ใช้ได้เฉพาะตัวเลข 0-9"
+		 },
+		 student_pass: {
+		   required: "กรุณากรอกรหัสผ่าน"
+		 },
+		 student_name: {
+		   required: "กรุณากรอกชื่อ"
+		 },
+		 student_lastname: {
+		   required: "กรุณากรอกสกุล"
+		 }
+	}
+	});
+	$( "#register-message" ).dialog({
+		modal: true,
+		autoOpen: false,
+		width: 600
+	});	
+	
+	$( "#register-preview" ).dialog({
+		modal: true,
+		autoOpen: false,
+		width: 600,
+		buttons: {
+		
+			"ยืนยัน": function() {
+				$.post("index_ajax.php?cmd=register", $("#register_form").serialize(),
+				function(data) {
+					var return_data = eval('(' + data + ')');
+					if(return_data['status'] == "true"){
+						alert(return_data['msg']);
+						$( "#register-preview" ).dialog( "close" );
+					}else if(return_data['status'] == "false"){
+						alert(return_data['msg']);
+						$( "#register-message" ).dialog( "open" );
+						$( "#register-preview" ).dialog( "close" );
+					}else if(return_data['status'] == "redirect"){
+						window.location=return_data['msg'];
+					}
+
+				});
+			},
+			"แก้ไขข้อมูล": function() {
+				$( "#register-message" ).dialog( "open" );
+				$( "#register-preview" ).dialog( "close" );
+			}
+			
+		}
+	});
+	
+	$( "#regist_bt" ).click(function() {
+		$( "#register-message" ).dialog( "open" );
+		return false;
+	});
+	
+	function check_register(){
+		//$("#register_form").submit();
+		return true;
+	}
+	
+	function preview_register(){
+	
+		$("#preview_student_id").html($("#register_form #student_id").val());
+		$("#preview_student_pass").html($("#register_form #student_pass").val());
+		$("#preview_prefix_name").html($("#register_form #prefix_name").val());
+		$("#preview_student_name").html($("#register_form #student_name").val());
+		$("#preview_student_lastname").html($("#register_form #student_lastname").val());
+		
+		$( "#register-message" ).dialog( "close" );
+		$("#register-preview").dialog( "open" );
+	}
+
+	
+});
+</script>
+<div id="register-message" title="ลงทะเบียนเรียน">
+	<div class="form_register content_inner">
+			<h1 class="big_bg_title">
+			ลงทะเบียนเรียน
+			</h1>
+		<div class="inner_form">
+		<form id="register_form" action="" method="post">
+			<p>
+			<label for="student_id">รหัสนักเรียน: </label>
+			<input type="text" class="input_txt" id="student_id" name="student_id" <?=$student_id_read_only?> value="<?=$student_id_register?>" /><br />
+			
+			<label for="student_pass">รหัสผ่าน: </label>
+			<input type="password" class="input_txt" id="student_pass" name="student_pass" value="<?=$old_pass?>" /><br />	
+			
+			<label for="prefix_name">คำนำหน้า: </label>
+			<select id="prefix_name" class="input_txt" name="prefix_name">
+				<option <? if($prefix_name =="ด.ญ.") echo "selected"; ?> value="ด.ญ.">ด.ญ.</option>
+				<option <? if($prefix_name =="ด.ช.") echo "selected"; ?> value="ด.ช.">ด.ช.</option>
+				<option <? if($prefix_name =="นางสาว") echo "selected"; ?> value="นางสาว">นางสาว</option>
+				<option <? if($prefix_name =="นาย") echo "selected"; ?> value="นาย">นาย</option>
+			</select><br />	
+			
+			<label for="student_name">ชื่อ: </label>
+			<input type="text" class="input_txt" id="student_name" name="student_name" value="<?=$student_name?>" /><br />
+			
+			<label for="student_lastname">สกุล: </label>
+			<input type="text" class="input_txt" id="student_lastname" name="student_lastname" value="<?=$student_lastname?>" /><br />
+			<input class="bt_input" type="submit" value="ลงทะเบียนเรียน" />
+			</p>
+		 </form>
+		 </div>
+	 </div>
+</div>
+<div id="register-preview" title="ลงทะเบียนเรียน">
+	<div class="form_register content_inner">
+			<h1 class="big_bg_title">
+				ลงทะเบียนเรียน
+			</h1>
+		<div class="inner_form">
+		<div id="register_form">
+			<p>
+				<span class="label_preview">รหัสนักเรียน: </span>
+				<span class="value_preview" id="preview_student_id">รหัสนักเรียน: </span><br />
+				
+				<span class="label_preview">รหัสผ่าน: </span>
+				<span class="value_preview" id="preview_student_pass">รหัสผ่าน: </span><br />
+				
+				<span class="label_preview">คำนำหน้า: </span>
+				<span class="value_preview" id="preview_prefix_name">คำนำหน้า: </span><br />
+				
+				<span class="label_preview">ชื่อ: </span>
+				<span class="value_preview" id="preview_student_name">ชื่อ: </span><br />
+				
+				<span class="label_preview">สกุล: </span>
+				<span class="value_preview" id="preview_student_lastname">สกุล: </span><br />
+			</p>
+		 </div>
+		 </div>
+	 </div>
+</div>

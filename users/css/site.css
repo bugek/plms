@@ -1,0 +1,139 @@
+body, td, th, input, select, textarea, div, span {
+	font-family: Tahoma;
+	font-size: 13px;
+}
+
+body, form {
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	color: #F60;
+	text-decoration: none;
+}
+a:hover {
+	color: #F30;
+	text-decoration: underline;
+}
+.hide {
+	display: none;
+}
+.user_info ul{
+    background-color: #FAEEDA;
+    float: right;
+    margin: 0 10px 0 0;
+    padding: 10px;
+    position: relative;
+    top: 55px;
+    width: 400px;
+}
+#footer p{
+margin:0px;
+}
+img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+#header {
+    background-color: #FFA200;
+    height: 100px;
+    text-align: center;
+}
+
+#footer{
+    text-align: center;
+}
+
+#content .form_login {
+    text-align: right;
+}
+
+#content .form_register {
+    text-align: right;
+}
+.left{
+float:left;
+}
+
+.clear {
+    clear: both;
+}
+
+.all #left_content{
+width:50%;
+margin:10px;
+}
+.all #right_content{
+width:40%;
+margin:10px;
+}
+.user_info li{
+    display: inline;
+    list-style-type: none;
+}
+
+.class_list li{
+list-style-type: none;
+}
+.class_list li span{
+
+}
+
+.show_course .class_list{
+width: 30%;
+float:left;
+}
+
+.show_course .course_list{
+width: 70%;
+float:left;
+}
+
+.play_course .course_list{
+    height: 500px;
+    overflow: auto;
+    width: 20%;
+    float:left;
+}
+
+.show_course .course_list li{
+    width: 150px;
+    float:left;
+    text-align: center;
+list-style-type: none;
+}
+
+.play_course .frame_play{
+    float: left;
+    width: 80%;
+}
+.play_course iframe{
+border: medium none;
+}
+.user_list .list_page li{
+    display: inline;
+    list-style-type: none;
+}
+
+.user_list table{
+    border: 1px solid;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.user_list table td{
+    border: 1px solid;
+}
+
+#fillter_form li {
+    display: inline;
+    list-style-type: none;
+    display: none;
+}
+
+#fillter_form .dis_type_fillter ,#fillter_form .dis_subject_name ,#fillter_form .dis_apply,#fillter_form .dis_class {
+    display: inline;
+}
+

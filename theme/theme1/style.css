@@ -1,0 +1,676 @@
+#header{
+height:81px;
+background: url("/sc/theme/theme1/images/head_bg.jpg") repeat-x scroll left 0;
+}
+#header .inner{
+height:81px;
+background: url("/sc/theme/theme1/images/head_bg_inner.jpg") no-repeat scroll left 0;
+}
+#content_main{
+background-color:#f2f0e6;
+}
+.user_info ul{
+   background-color: transparent;
+    float: right;
+    margin: 0 10px 0 0;
+    padding: 10px;
+    position: relative;
+    text-align: right;
+    top: 25px;
+    width: auto;
+}
+.user_info li {
+    display: inline;
+    list-style-type: none;
+    margin-left:20px;
+    color: #FF6600;
+    font-size:16px;
+}
+.user_info li span{
+    font-size:16px;
+}
+.user_info li select{
+    color: #FF6600;
+font-size:14px;
+}
+.content_left{
+margin:16px;
+}
+*html .content_left{
+margin-left:8px;
+}
+.content_left ul{
+ margin:0px;
+ padding-left:0px;
+ padding-top:0px;
+ color:#FB8C35;
+}
+.play_course .content_left ul{
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 0;
+    width: 198px;
+}
+.play_course .content_left ul ul{
+    height: auto;
+    margin: 0;
+    overflow-y: none;
+    padding:0px;
+background-color:transparent;
+    width: 184px;
+}
+.content_left .menu_path{
+ padding-top: 25px;
+ padding-left: 25px;
+ width:202px;
+ background: url("/sc/theme/theme1/images/left_bg_head.jpg") no-repeat scroll center 0 #ffb200;
+ min-height:342px;
+}
+*html .content_left .menu_path{
+ height:342px;
+}
+.play_course .content_left ul a{
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 13px;
+}
+.play_course .content_left ul ul{
+
+}
+.play_course .content_left ul ul li{
+
+}
+.content_left ul ul{
+ padding-top:10px;
+padding-left:10px;
+}
+.content_left li{
+ margin:0;
+}
+.content_left .menu_path_footer{
+height: 14px;
+width: 227px;
+margin-top:-3px;
+background: url("/sc/theme/theme1/images/left_bg_footer.jpg") no-repeat scroll center bottom;
+}
+
+.content_left a {
+color: #FFFFFF;
+text-decoration: none;
+font-size:15px;
+}
+.content_left a:hover {
+color: #DDDDDD;
+text-decoration: underline;
+}
+.right_panel{
+text-align:center;
+}
+.right_panel .content_inner{
+    background: url("/sc/theme/theme1/images/bg_center.jpg") repeat-x scroll 0 0 transparent;
+    height: 370px;
+    margin: 16px;
+    padding: 10px;
+    text-align: center;
+}
+#register-message .form_register .inner_form{
+    margin: 18px 60px 0px 160px;
+    text-align: left;
+}
+.form_register label{
+    clear: both;
+    color: #F15056;
+    display: block;
+    float: left;
+    width: 75px;
+}
+.form_register p{
+    margin:0px;
+padding:0px;
+}
+.form_register .input_txt{
+    border-color: #CCCCCC;
+    color: #F15056;
+    float: left;
+    margin-bottom: 5px;
+}
+.form_register em{
+    color: red;
+    display: block;
+    float: left;
+    margin-left: 5px;
+}
+.over_lay{
+    background: url("/sc/theme/theme1/images/bg_list_menu.jpg") no-repeat scroll 0 3px transparent;
+    left: 268px;
+    position: absolute;
+    top: 105px;
+    width: 583px;
+}
+.over_lay ul {
+    margin: 12px;
+padding:0px;
+}
+.over_lay li{
+    display: inline;
+    background: url("/sc/theme/theme1/images/img_subject.jpg") no-repeat scroll 0 center transparent;
+    padding-left: 15px;
+}
+.bt_input{
+border:solid 1px #c7c7c7;
+color:#fa4f00;
+background-color:#ffffff;
+margin-left: 116px;
+height: 22px;
+}
+.register .bt_input{
+    margin-left: 116px;
+    width: 106px;
+}
+.edit .bt_input{
+    margin-left: 155px;
+    width: 66px;
+}
+#footer{
+background: url("/sc/theme/theme1/images/footer_line.jpg") repeat-x scroll 0 0 #f6f6f6;
+background-color: #f6f6f6;
+padding:10px;
+}
+.footer_line{
+background: url("/sc/theme/theme1/images/footer_line.jpg") repeat-x scroll 0 0 #f6f6f6;
+}
+
+.right_panel .item li{
+    display: block;
+    text-align: left;
+    width: 45%;
+    float:left;
+margin-bottom:5px;
+}
+.report_course_detail_main .item li{
+    display: block;
+    text-align: left;
+    width: 178px;
+    color:#f15056;
+float:left;
+margin-bottom:8px;
+}
+.report_course_detail_main .item .head{
+    font-weight: bold;
+}
+.right_panel .item{
+    text-align:left;
+}
+.menu_path .home_ie{
+    background: url("/sc/theme/theme1/images/home_ie.jpg") no-repeat scroll 0 0 transparent;
+    height: 95px;
+    left: 0;
+    position: relative;
+    top: 51px;
+    width: 178px;
+}
+
+#content .form_login{
+    background: url("/sc/theme/theme1/images/bg_login.jpg") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    height: 140px;
+    margin: 110px auto auto;
+    padding: 10px;
+    text-align: left;
+    width: 205px;
+}
+#content .form_login label{
+    display: block;
+    float: left;
+    width: 78px;
+}
+
+.guest_login{
+    background: url("/sc/theme/theme1/images/guest_bt.jpg") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 43px;
+    overflow: hidden;
+    position: relative;
+    text-indent: 5000px;
+    top: 78px;
+    width: 305px;
+left: -10px;
+}
+.guest_register{
+    background: url("/sc/theme/theme1/images/register_bt.jpg") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 43px;
+    left: 304px;
+    overflow: hidden;
+    position: relative;
+    text-indent: -5000px;
+    top: 35px;
+    width: 285px;
+}
+.form_login h1{
+font-size: 15px;
+}
+.form_login em{
+color:red;
+}
+.form_login form{
+margin:0px;
+padding:0px;
+
+}
+.form_login #student_id{
+margin-bottom:5px;
+width:120px;
+float: left;
+color: #FA4F00;
+}
+.form_login .bt_input{
+    margin-left: 5px;
+    margin-top: 0px;
+    width: 95px;
+}
+.form_login form{
+margin:0px;
+padding:0px;
+}
+.form_login #student_pass{
+margin-bottom:5px;
+color: #FA4F00;
+float: left;
+width:120px;
+}
+
+.content_inner legend{
+    font-size: 14px;
+    font-weight: bold;
+}
+.report_course_detail_main legend{
+    font-size: 14px;
+    font-weight: bold;
+    color:#ff6600;
+}
+
+.content_inner .head li{
+    font-weight: bold;
+}
+
+.form_register .big_bg_title{
+    background: none repeat scroll 0 0 #EFE3D5;
+    color: #FF6F00;
+    font-size: 22px;
+    height: 40px;
+    margin: 8px 0 18px;
+    padding-top: 13px;
+    text-align: center;
+}
+.show_course .course_list h2{
+    background: none repeat scroll 0 0 #F0E4D6;
+    color: #FB8C35;
+    font-size: 18px;
+    height: 36px;
+    margin: 10px;
+    padding: 14px 0 0 14px;
+    text-align: left;
+    width: auto;
+}
+.show_course .course_list{
+    background: url("/sc/theme/theme1/images/bg_center.jpg") repeat-x scroll 0 0 transparent;
+    margin: 16px;
+    width: 55%;
+}
+
+.show_course .subject_list{
+ background: url("/sc/theme/theme1/images/bg_center.jpg") repeat-x scroll 0 0 transparent;
+    min-height: 385px;
+    margin-top: 16px;
+    width: 16%;
+}
+*html .show_course .subject_list{
+height: 385px;
+}
+.show_course .subject_list h2{
+   font-size:18px; 
+color: #FB8C35;
+padding: 0px 0 0 14px;
+margin: 18px 0;
+}
+.show_course .subject_list li{
+    background: url("/sc/theme/theme1/images/img_subject.jpg") no-repeat scroll 0 center transparent;
+    border-top: 1px solid #E9E7E7;
+    color: #89B8CD;
+    list-style: none outside none;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 5px;
+    width: 128px;
+    cursor: pointer;
+}
+.show_course .subject_list .obj_selected{
+    color: #F47121;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.menu_path .obj_selected{
+    color: #dddddd;
+    text-decoration: underline;
+font-weight: bold;
+}
+.show_course .subject_list ul{
+   padding-left: 15px;
+margin:0px;
+}
+
+.course_list a{
+    color: #89b8cd;
+    text-decoration: none;
+    font-weight: bold;
+}
+.course_list a:hover{
+    color: #69aac7;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.show_course .course_list li {
+    color: #AAAAAA;
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    padding: 0;
+    text-align: left;
+    padding-left: 33px;
+    width: 166px;
+    height:215px;
+}
+.show_course .course_list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.show_course .course_list  .ul_list{
+    height: 304px;
+}
+
+.bg_ps{
+    background: url("/sc/theme/theme1/images/bg_ps.jpg") no-repeat scroll 0 0 transparent;
+    color: SeaGreen;
+    height: 16px;
+    padding: 1px 0 0 2px;
+    text-align: left;
+    width: 166px;
+}
+.curent_ps{
+    background: url("/sc/theme/theme1/images/curent_ps.jpg") repeat-x scroll 0 0 transparent;
+    height: 16px;
+    width: 166px;
+	text-align: center;
+}
+
+.report_user .item .user_ps{
+width: 25%;
+}
+.report_user .item .user_status{
+width: 15%;
+}
+.report_user .item .score_test{
+width: 15%;
+text-align: center;
+}
+.report_user{
+color:#F15056;
+}
+.report_user legend{
+color:#FF6600;
+}
+.progress_bar li{
+    display: block;
+    list-style-type: none;
+    margin-left: 20px;
+float:left;
+font-size:14px;
+}
+.progress_bar ul {
+    color: #FF6600;
+}
+.progress_bar{
+    margin-left: -440px;
+    margin-top: -13px;
+	float:left;
+}
+*:first-child+html .progress_bar{
+    margin-left: -440px;
+    margin-top: 0px;
+    position: absolute;
+}
+.play_course .frame_play {
+    width: 804px;
+    margin-top:16px;
+}
+.show_course .subject_list p{
+color:#AAAAAA;
+padding-left:10px;
+}
+.play_course .bt_hidden{
+    background: url("/sc/theme/theme1/images/out-2.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 63px;
+    margin-left: -16px;
+    margin-top: 166px;
+    text-indent: -5000px;
+    width: 25px;
+}
+.play_course .bt_show{
+    background: url("/sc/theme/theme1/images/in-2.png") no-repeat scroll 0 0 transparent;
+    height: 63px;
+    width: 25px;
+    margin-left: 0;
+}
+.play_course .bt_close {
+    background: url("/sc/theme/theme1/images/close_bt.jpg") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 21px;
+    text-indent: -5000px;
+    width: 24px;
+    float: left;
+    margin-left: -25px;
+    margin-top: -5px;
+}
+.play_course .content_left{
+    margin-left: 2px;
+}
+.form_login #student_name {
+    color: #FA4F00;
+    float: left;
+    margin-bottom: 5px;
+    width: 120px;
+}
+#fillter_form{
+    background-color: wheat;
+    border: 1px solid #E2E2E2;
+    color: LightCoral;
+    margin: 10px 0;
+}
+#course_loading{
+z-index: 5;
+}
+
+#fillter_form select{
+    color: Peru;
+    border: 1px solid #E2E2E2;
+}
+#fillter_form input{
+    color: Peru;
+    border: 1px solid #E2E2E2;
+}
+.user_list table,.report_course_detail .display_stage table{
+    border: 1px solid ;
+    color: #ae6d14;
+    margin: 10px;
+    width: 98%;
+    text-align: left;
+    border-collapse: collapse;
+}
+.user_list td,.user_list th,.report_course_detail .display_stage td,.report_course_detail .display_stage th{
+    border: 1px solid ;
+    border-spacing:10px;
+    padding:4px;
+}
+.report_course_detail .show_graph, .user_list .add_student{
+    margin-right: 15px;
+    text-align: right;
+    margin-top: 15px;
+}
+.user_list .list_page{
+    color: #FF6600;
+    margin: 10px;
+    padding: 0;
+}
+.iframe_api{
+display: none;
+}
+.right_panel .item ul, .report_course_detail_main .item ul {
+clear: both;
+}
+.user_list_main .over_lay, .report_course_detail_main .over_lay {
+    left: 10px;
+    position: absolute;
+    top: 90px;
+    width: 583px;
+    background:none;
+
+}
+.user_list_main .over_lay a, .report_course_detail_main .over_lay a{
+font-size:16px;
+color:#FF6600;
+}
+.user_list .add_student{
+margin-top: 20px;
+}
+.report_course_detail .course_list{
+margin-top:24px;
+}
+
+
+.show_graph a {
+    background: url("/sc/theme/theme3/images/graph_pic.jpg") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 24px;
+    overflow: hidden;
+    text-indent: 30px;
+    width: 25px;
+}
+.report_course_detail .display_stage {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E2E2;
+}
+.report_course_detail, .user_list {
+    background: url("/sc/theme/theme3/images/bg_login.jpg") repeat-x scroll 0 0 #FFFFFF;
+    border: 1px solid #E2E2E2;
+    color: #04A9C9;
+    margin: 15px;
+    overflow-x: visible;
+    overflow-y: auto;
+    padding: 10px;
+    text-align: left;
+}
+.report_course_detail .add td, .user_list table .add td {
+    background-color: #ffefd0;
+}
+.report_course_detail th, .user_list th {
+    border-color: #E2E2E2;
+    color: #000;
+}
+.user_list td, .user_list th, .report_course_detail .display_stage td, .report_course_detail .display_stage th {
+    border-color: #E2E2E2;
+}
+.report_course_detail table td, .user_list table td{
+    color: #000;
+    border: 1px solid #E2E2E2;
+}
+.play_course .content_left .menu_path{
+    padding-left: 5px;
+    padding-top: 10px;
+width:222px;
+}
+.head_text {
+    color: #FC6900;
+    font-size: 30px;
+    font-weight: bold;
+    left: 208px;
+    top: 38px;
+    position: absolute;
+    text-align: left;
+}
+#register_form .bt_input{
+    margin-left:105px;
+font-family: tahoma;
+}
+#register-preview #register_form .label_preview{
+    color: #F15056;
+    margin-left: 170px;
+    margin-top: 10px;
+    display: inline-block;
+}
+#register-preview #register_form .value_preview{
+    color: #FF6F00;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.display_profile_main .form_register .inner_form,.edit_profile_main .form_register .inner_form{
+    margin: 70px auto auto;
+    width: 222px;
+}
+
+.display_profile_main .form_register .inner_form{
+    text-align:left;
+}
+
+.edit_profile_main .form_register em{
+    color: MediumSeaGreen;
+    margin-bottom: 10px;
+    margin-left: 73px;
+}
+.display_profile_main .form_register span{
+    color: #FA4F00;
+font-weight: normal;
+}
+.display_profile_main .bt_bar{
+text-align:center;
+}
+.display_profile_main .bt_input{
+margin: 10px 0 0;
+}
+.display_profile_main .form_register label{
+    margin-top: 10px;
+}
+.display_profile_main .form_register li{
+    color: #FF6600;
+    font-weight: bold;
+    list-style: none outside none;
+    margin-top: 5px;
+}
+.edit_profile_main .edit .bt_input{
+margin-left:5px;
+}
+.display_profile_main .form_register em{
+    clear: both;
+    color: MediumSpringGreen;
+    display: block;
+    float: none;
+    margin-left: 38px;
+}
+#sub_score table{
+color:#F15056;
+}
+
+a.class_left{
+font-size: 18px;
+}
+.play_course{
+width: 1062px;
+}

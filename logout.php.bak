@@ -1,0 +1,9 @@
+<?
+	session_destroy();
+	if(isset($_SERVER["SERVER_NAME"]){
+	  if($_SERVER["SERVER_NAME"] == "localhost") {
+			js_redirect("index.php?cmd=login_admin");
+	  }
+	}
+	js_redirect("index.php");
+?>

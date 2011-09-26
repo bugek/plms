@@ -1,0 +1,59 @@
+INSTALLATION INSTRUCTIONS FOR VS SCORM 1.2 RTE REV 2.1
+
+------------------------------------------------------------------------------------
+1. INTRODUCTION
+
+These are the core components of the code:
+
+* At the top level, there's an HTML frameset that runs in the student's browser. This consists of the frameset itself (rte.php), the SCO (you'll have to define where that's situated), and the JavaScript SCORM API (api.php). The api.php file also houses the JavaScript data cache.
+  
+* The JavaScript API communicates with API code that sits on the server using AJAX calls.
+  
+* The server-side API - written in PHP - consists of 2 scripts - commit.php and finish.php - that transfer data elements from the data cache in api.php to the server database when requested by either the LMSCommit or LMSFinish() API calls.
+  
+* The PHP API scripts communicate with the LMS server through database-specific, and LMS-specific code that's contained in the subs.php script.
+  
+* Database login information is contained in the config.php file.
+  
+There are also 3 utility files provided in the package: 
+
+  index.html 
+  ./utils/cleardb.php 
+  ./utils/showdb.php 
+
+These allow you to run the code on a webserver without access to a real LMS.
+
+------------------------------------------------------------------------------------
+2. INSTALLATION
+
+If you're planning to use this yourself, you'll have some editing and customization to do. Here's what you'll have to do:
+
+a) Install all the code on a web server somewhere.
+  
+b) Create a database table called 'scormvars'. How you do this will depend on what database you're using - MySQL was used for these experiments, but that doesn't mean that you have to do the same. Here are the SQL commands to set up a suitable MySQL table. 
+
+	CREATE TABLE `scormvars` (
+	  `SCOInstanceID` int(10) unsigned NOT NULL default '0',
+	  `varName` varchar(255) default NULL,
+	  `varValue` text,
+	  KEY `SCOInstanceID` (`SCOInstanceID`),
+	  KEY `varName` (`varName`)
+	) ;
+
+c) Edit config.php to include login information for your database.
+  
+d) Edit subs.php to suit the database that you're using - again, this was written for MySQL.
+  
+e) Install your SCO and, if necessary, edit the rte.php file to point to it.
+  
+f) Access the test/demo system using the index.html file.
+
+------------------------------------------------------------------------------------
+3. NOTES 
+
+1. The utils/cleardb.php and utils/showdb.php files are both written for use with MySQL. If you plan to use them, you may need to translate them to suit the database that you're using.
+
+2. This is a technology demonstrator - not production-standard code. If you find any bugs or have any suggestions, please let me know using the contact form on the VS SCORM website at http://www.vsscorm.net/contact/
+
+------------------------------------------------------------------------------------
+This Revision: Friday, April 30, 2010 - 12:26:30 AM
